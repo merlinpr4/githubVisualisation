@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/githubcat.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+    <title>Github Visualisation</title>
+    
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--bootstrap styling sheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <!-- charting libraries-->
+    <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" ></script>
+
+    <script type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
+
+    
+   
+  </head>
+  <body  style="background-color: #ffd394">
+
+  <nav class="navbar navbar-light" style="background-color: #FFA500">
+    <a class="navbar-brand" href="#">
+      <img src= "assets/githubcat.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Github Visualiser
+    </a>
+  </nav>
+
+  <!--displayes the profile picture , github stats and language piechart on the top-->
+    <div class="container-fluid"</div>
+      <div class="row" >
+          <div class= "col-md-auto mt-3">
+          <img id= "profile_pic" alt="Profile Picture" width="200" height="200">
+        </div>
+        <div class = "card mt-3" >
+        <div class= "col" div id= "user_info" style="position: relative; width:30vw">
+          </div>
+        </div>
+          <div class "col">
+            <div class = "container">
+            <div class="card mt-3 ">
+            <div class "chart-container" style="position: relative; width:40vw">
+            <canvas id="primaryLanguageFrequency"> </canvas>
+          </div>
+        </div>
+      </div>
+    </div>        
+  </div> 
+</div>
+
+  <!--displays the total commites per repository graph-->
+    <div class = "container">
+    <div class = "card mt-3">
+    <div class= "chart-container" style="position: relative; " >
+     <canvas id= "totalCommits" ></canvas>
+    </div>
+  </div>
+</div>
+
+<!--displays the size vs total commits graph-->
+    <div class = "container">
+    <div class = "card mt-3">
+    <div class="chart-container" style="position: relative;">
+      <canvas id="twoLineGraph" ></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!--displays the days spend vs total commits barchart-->
+  <div class = "container">
+    <div class = "card mt-3">
+    <div class="chart-container" style="position: relative;">
+      <canvas id= "daysSpend"></canvas>
+      </div>
+    </div>
+    </div>
+
+      <!--graph scripts and bootstrap cdn links-->
+      <script type="text/javascript"  src="graph.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--bottom margin spacing-->
+        <div class="container-fluid" style="background-color: #ffd394">
+            <p class="copyright pull-right">
+                
+            </p>
+        </div>
+  </body>
+</html>

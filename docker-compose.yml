@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  mongodb:
+    image : mongo
+    container_name: mongodb-csu33012-v2
+    environment:
+      - PUID=1000
+      - PGID=1000
+   # volumes: #uncomment if you want it for you want to host it
+     # - C:/Users/merli/Documents/MongaDB:/data/db #place your directory here if you want to host it
+   
+      
+    ports:
+      - 27017:27017
+      
+    restart: unless-stopped
